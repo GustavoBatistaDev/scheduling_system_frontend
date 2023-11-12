@@ -12,10 +12,8 @@ const { register, handleSubmit, reset } = useForm();
     try {
       //response.response.data.message
       const response = await registerUser(data);
-      console.log(response);
      
        if(response.user){
-
           toast.success(response.message);
           reset();
           return;
@@ -27,7 +25,7 @@ const { register, handleSubmit, reset } = useForm();
       }
       
     } catch (error) {
-        //
+        console.log(error);
     }
   };
 
@@ -63,7 +61,7 @@ const { register, handleSubmit, reset } = useForm();
           <input {...register("password", { required: true })} required className="input" type="text" name="password" />
           <br />
           <button className="continue">Continuar</button>
-          <h5 className="forgot-password">Esqueceu sua senha?</h5>
+          <h5 className="forgot-password"><Link to="/recuperar-senha">Esqueceu sua senha?</Link></h5>
           </form>
         </section>
       </main>

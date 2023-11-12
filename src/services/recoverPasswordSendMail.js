@@ -7,10 +7,10 @@ const apiUrlbase = `${import.meta.env.VITE_SERVER_EXPRESS_PROTOCOL}://${import.m
 
 
 
-const endpoint = '/user/login'
+const endpoint = '/user/recover-password'
 
 
-const loginrUser = async (postData) => {
+const recoverPasswordSendMail = async (postData) => {
   // eslint-disable-next-line no-useless-catch
   try {
     const response = await axios.post(apiUrlbase + endpoint, postData);
@@ -21,4 +21,4 @@ const loginrUser = async (postData) => {
   }
 };
 
-export { loginrUser };
+export { recoverPasswordSendMail };

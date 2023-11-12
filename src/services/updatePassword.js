@@ -1,16 +1,12 @@
 
 import axios from 'axios';
 
-
 // eslint-disable-next-line no-undef
 const apiUrlbase = `${import.meta.env.VITE_SERVER_EXPRESS_PROTOCOL}://${import.meta.env.VITE_SERVER_EXPRESS_HOST}:${import.meta.env.VITE_SERVER_EXPRESS_PORT}`;
 
+const endpoint = '/user/recover'
 
-
-const endpoint = '/user/login'
-
-
-const loginrUser = async (postData) => {
+const updatePassword = async (postData) => {
   // eslint-disable-next-line no-useless-catch
   try {
     const response = await axios.post(apiUrlbase + endpoint, postData);
@@ -21,4 +17,4 @@ const loginrUser = async (postData) => {
   }
 };
 
-export { loginrUser };
+export { updatePassword };

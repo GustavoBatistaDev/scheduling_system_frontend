@@ -2,32 +2,32 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { loginrUser } from '../services/loginUser';
-
+import { useNavigate } from 'react-router-dom';
+import { setJwtToCookie } from '../services/jwtsServices';
 
 export const Signin = () => {
 
-const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     try {
       //response.response.data.message
         const response = await loginrUser(data);
 
-        console.log(response);
-
-        if(response.user){
-            toast.success(response.message);
+        if(response.data.user.id){
+            toast.success(`Bem vindo(a), ${response.data.user.first_name}`);
             reset();
+            setJwtToCookie(response.data.token);
+            navigate('/dashboard');
+
             return;
         }
 
-        if(response.response.status >= 400){
-            toast.error('nao sei');
-            return;
-        }
+    
       
     } catch (error) {
-        //
+        toast.error(`${error?.response?.data?.message}`);
     }
   };
 
@@ -54,7 +54,7 @@ const { register, handleSubmit, reset } = useForm();
           <input {...register("password", { required: true })} required className="input" type="text" name="password" />
           <br />
           <button className="continue">Continuar</button>
-          <h5 className="forgot-password">Esqueceu sua senha?</h5>
+         <h5 className="forgot-password"><Link to="/recuperar-senha">Esqueceu sua senha?</Link></h5>
           </form>
         </section>
       </main>
