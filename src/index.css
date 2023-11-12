@@ -1,0 +1,113 @@
+:root{
+  --color1: #5B87DA;
+  --color2: #7cb6c2;
+  --color3: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto', serif;
+  outline: none;
+
+}
+
+.main-content{
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  background-image: url('../public/back.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.541);
+}
+
+.container-form{
+  border-radius: 5px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.308);
+  min-width: 450px;
+  height: 500px;
+  padding: 30px 50px;
+}
+
+.form-title{
+  font-size: 30px;
+    color: #323232;
+  margin-bottom: 16px;
+}
+
+.form-sub-title{
+  color: #323232;
+  margin-bottom: 32px;
+}
+
+.register{
+  color: #1473E6;
+}
+
+.input{
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  
+  transition: .2s ease-in-out;
+  border-bottom: 1px solid #EAEAEA;
+  width: 100%;
+
+}
+
+.input:focus{
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: 1px solid #1473E6;
+  width: 100%;
+
+}
+
+
+.form-span{
+
+  color: #747474;
+  margin-bottom: 8px;
+}
+
+.forgot-password{
+  position: relative;
+    cursor: pointer;
+    color: #1473E6;;
+    margin-top: -40px;
+    font-size: 11px;
+    margin-bottom: 280px;
+}
+
+.continue{
+  background: #1473E6;
+  padding: 8px 20px;
+  border-radius: 17px;
+  border: transparent;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
