@@ -3,34 +3,34 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { loginrUser } from '../services/loginUser';
 import { useNavigate } from 'react-router-dom';
-import { setJwtToCookie } from '../services/jwtsServices';
+import { useAuth } from '../context/AuthContext';
+
 
 export const Signin = () => {
 
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
 
+  // eslint-disable-next-line no-unused-vars
+  const { login } = useAuth();
+
   const onSubmit = async (data) => {
     try {
-      //response.response.data.message
         const response = await loginrUser(data);
 
         if(response.data.user.id){
             toast.success(`Bem vindo(a), ${response.data.user.first_name}`);
             reset();
-            setJwtToCookie(response.data.token);
-            navigate('/dashboard');
-
-            return;
+            login(response.data.token);
+          
+            navigate('/painel/consulta');
         }
 
-    
-      
     } catch (error) {
         toast.error(`${error?.response?.data?.message}`);
     }
   };
-
+  
 
   return (
     <>
@@ -47,8 +47,6 @@ export const Signin = () => {
             <h5 className="form-span">Endereço de email</h5>
           <input {...register("email", { required: true })} required className="input" type="email" name="email" />
   
-        
-          
           <br />
           <h5 className="form-span">Senha</h5>
           <input {...register("password", { required: true })} required className="input" type="text" name="password" />

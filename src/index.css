@@ -112,3 +112,233 @@
   cursor: pointer;
   margin-left: auto;
 }
+
+
+/* Dashboard.css */
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background-color: #1473E6;
+  color: #fff;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: .5s ease-in;
+  
+}
+
+.open{
+  margin-left: -270px;
+}
+
+.closed{
+    margin-left: 0px;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.user-photo {
+  border-radius: 50%;
+  width: 70px;
+  object-fit: cover;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.fa-arrow-left, .fa-arrow-right{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+
+.fa-right-from-bracket{
+   position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.nav-links li {
+  line-height: 40px;
+  margin: 20px 0;
+  margin-bottom: 10px;
+  background-color: rgba(91, 135, 218, 0.57);
+  width: 150px;
+  display: flex;
+ 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+
+  
+  color: #323232;
+  width: 90px;
+
+
+  
+}
+
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralizar verticalmente */
+}
+
+.nav-links li {
+  margin-bottom: 10px;
+
+}
+
+.nav-links a {
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center; /* Centralizar horizontalmente */
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #eee;
+}
+
+.content{
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Adicione mais estilos conforme necessário */
+
+/*card user profile*/
+.card-usuario {
+  min-height: 120px;
+  width: 400px; 
+  display: flex;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+
+.darkgray{
+  color: rgb(118, 118, 118);
+  font-weight: 300;
+}
+
+.info{
+  margin-left: 10px;
+}
+
+.card-usuario img {
+  width: 90px; /* Ajuste conforme necessário */
+  height: 90px; /* Ajuste conforme necessário */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-usuario h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.form{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 330px;
+  width: 400px; 
+  background-color: white;
+  border: 1px solid #ddd;
+
+}
+
+.form input{
+  padding: 14px 0;
+}
+
+.send{
+  cursor: pointer;
+  background-color: #1473E6;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: transparent;
+}
+
+.send:hover{
+  background-color: #135ebb;
+}
+
+
+/*end card user profile*/
+
+/* consulta */
+
+
+
+.consulta{
+   border: 1px solid #ddd;
+}
+
+.form-consulta{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 340px;
+    width: 400px; 
+    background-color: white;
+   
+}
+
+.form-consulta input{
+
+  padding: 14px 0;
+}
+
+.option{
+  padding: 3px 0;
+}
+/*end consulta*/

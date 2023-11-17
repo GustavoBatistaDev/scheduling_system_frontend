@@ -5,14 +5,14 @@ import { recoverPasswordSendMail } from '../services/recoverPasswordSendMail';
 
 export const ForgotPassword = () => {
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
 
   const onSubmit = async (data) => {
     try {
       //response.response.data.message
         const response = await recoverPasswordSendMail(data);
-
+        reset();
         toast.success(response?.data?.message);
     
       

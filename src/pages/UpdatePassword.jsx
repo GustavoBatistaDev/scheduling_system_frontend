@@ -11,20 +11,14 @@ export const UpdatePassword = () => {
 
   const onSubmit = async (data) => {
     try {
-       console.log(data)
-      //response.response.data.message
         const response = await updatePassword(data);
-    
         toast.success(response?.data?.message);
         reset();
-           
         navigate('/');
-      
     } catch (error) {
         toast.error(`${error?.response?.data?.message}`);
     }
   };
-
 
   return (
     <>
@@ -42,7 +36,6 @@ export const UpdatePassword = () => {
           <input {...register("password", { required: true })} required className="input" type="password" name="password" /> <br />
           <h5 className="form-span">Senha novamente</h5>
           <input {...register("passwordConfirm", { required: true })} required className="input" type="password" name="passwordConfirm" />
-  
           <br />
           <input  {...register("hash", { required: true })} type="hidden" name='hash' value={tokenObject.token} />
           <button className="continue">Continuar</button>
