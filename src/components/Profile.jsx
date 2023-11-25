@@ -1,25 +1,41 @@
 export const Profile = () => {
     return (
-         <div className="content">
-            <div className="card-usuario">
-                <img className='card-image' src="https://img.freepik.com/fotos-gratis/foto-na-cabeca-de-uma-mulher-feliz-rindo-e-sorrindo-amplamente_273609-28720.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699920000&semt=ais"  />
-              <div className='info'>
-                  <h3 className='darkgray'>Fernanda Torres</h3>
-                    <hr style={{marginBottom: '15px'}} />
-                <h5 className='darkgray'>Cpf: 101.764.175-75</h5>
-                 <h5 className='darkgray'>Email: fernandatorres@gmail.com</h5>
-              </div>
+        <div className="container-dashboard">
+        
+            <div className="col-1">
+                <h3 style={{position:'absolute', zIndex: '1'}} className="title-col-1 text-color">Editar Perfil</h3>
+                <form  className="form-dashboard form1" action="">
+                    <label  className="text-color" htmlFor="">Nome</label>
+                    <input type="text" className="input-dashboard" />
+                    <label  className="text-color" htmlFor="">Último nome</label>
+                    <input type="text" className="input-dashboard" />
+                    <label  className="text-color" htmlFor="">Foto</label>
+                    <input type="file" className="input-dashboard" />
+                    
+                    <label  className="text-color" htmlFor="">Email</label>
+                    <input type="email" className="input-dashboard" />
+                    <label  className="text-color" htmlFor="">Cpf</label>
+                    <input type="text" className="input-dashboard" />
+                    <label  className="text-color" htmlFor="">Telefone</label>
+                    <input type="text" className="input-dashboard" />
+                    <label  className="text-color" htmlFor="">Data de nascimento</label>
+                    <input type="date" className="input-dashboard" />
+                    <label  className="text-color" htmlFor="">RG</label>
+                    <input type="text" className="input-dashboard" />
+                    <input type="submit" value="Editar perfil" className="submit-dashboard" />
+                </form>
             </div>
-            <div className="form-change-data-profile">
-               
-                <form className='form' action="">
-                     <h4 className='darkgray'>Alterar</h4>
-                    <input className='input' type="text" placeholder='Nome...' />
-                    <input className='input' type="text" placeholder='Último nome...' />
-                    <input className='input' type="text" placeholder='Cpf...' />
-                    <input className='input' type="text" placeholder='Email...' />
-                    <input className='input' type="text" placeholder='Password...' />
-                    <button className='send'>Enviar</button>
+          
+            <div className="col-3">
+                 <form className="form-dashboard form3" action="">
+                  <h3 style={{marginBottom: '16px'}} className="title-col-1">Editar senha</h3>
+                    <label  className="text-color" htmlFor="">Senha atual</label>
+                    <input type="text" className="input-dashboard" />
+                    <label  className="text-color" htmlFor="">Nova senha</label>
+                    <input type="text" className="input-dashboard" />
+                     <label  className="text-color" htmlFor="">Nova senha</label>
+                    <input type="email" className="input-dashboard" />
+                    <input type="submit" value="Editar senha" className="submit-dashboard" />
                 </form>
             </div>
         </div>

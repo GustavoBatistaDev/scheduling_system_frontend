@@ -36,7 +36,7 @@ export const Signin = () => {
     <>
       <main className="main-content">
         <section className="container-form">
-          <h1 className="form-title">Inscreva-se</h1>
+          <h1 className="form-title">Login</h1>
           <h5 className="form-sub-title">
             <span className="new-user">Não possui conta?</span>
             <Link to="/registrar" className="register" style={{ color: '#1473E6' }}>

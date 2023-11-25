@@ -4,4 +4,5 @@ export const setJwtToLocalStorage = (jwt) => {
 
 export const removeJwtToLocalStorage= () => {
     localStorage.removeItem('jwt');
+    location.reload();
 };

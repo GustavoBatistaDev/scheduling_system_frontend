@@ -12,13 +12,12 @@ import { MedicalAppointment } from './components/medicalAppointment.jsx';
 import { Profile } from './components/Profile.jsx';
 import { Contato } from './components/Contato.jsx';
 import { getJwtService } from './services/getJwt.service.js';
+import { Schedule } from './components/Schedule.jsx';
 
 
 const RouteGuard = ({ children }) => {
     const token = getJwtService();
-    
-    return token ? children: <Navigate to="/"/>
-      
+    return token ? children: <Navigate to="/"/>    
 };
 
 
@@ -31,6 +30,7 @@ export const MyRoutes = () => {
             <Route path='consulta' element={<MedicalAppointment/>}/>
             <Route path='perfil' element={<Profile/>}/>
             <Route path='contato' element={<Contato/>}/>
+              <Route path='agendamentos' element={<Schedule/>}/>
           </Route>
          
           <Route path="recuperar-senha/" element={<ForgotPassword />} /> 
