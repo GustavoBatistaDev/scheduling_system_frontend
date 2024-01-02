@@ -70,6 +70,12 @@ const Dashboard = () => {
       </div>
 
       <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
+       
+        <span className='text-logo'>Logo</span>
+   
+        
+
+
         <div className="user-info">
           <img
             className="user-photo"
@@ -93,8 +99,8 @@ const Dashboard = () => {
             <Link to="/painel/contato">Contato</Link>
           </li>
           <li>
-            <i className="fa-solid fa-address-book icon-sidebar"></i>
-            <Link to="/painel/agendamentos">Agendamentos</Link>
+            <i className="fa-solid fa-calendar-days icon-sidebar"></i>
+            <Link to="/painel/agendamentos">Histórico</Link>
           </li>
         </ul>
         <i  onClick={openLogoutModal} className="fa-solid fa-right-from-bracket"></i>

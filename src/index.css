@@ -141,7 +141,7 @@
 }
 
 .open{
-  margin-left: -270px;
+  margin-left: -231px;
 }
 
 .closed{
@@ -220,12 +220,73 @@
 }
 
 .simple-table th, .simple-table td {
-  border: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 13px;
+
+  font-size: 14px;
+}
+
+.search{
+  height: 39px;
+  min-width: 290px;
+  padding: 0 0 0 8px;
+  float: right;
+  border: 1px solid #1473E6;
+  border-radius: 4px;
+}
+
+th{
+color: #1A202C;
+}
+
+.input-search{
+  height: 100%;
+  width: 280px;
+  background-color: transparent;
+  border: transparent;
+}
+
+.btn-icon{
+  height: 100%;
+  background-color: #1473E6;
+  color: white;
+  width: 40px;
+  border: #1473E6;
+}
+
+.pagination{
+  min-height: 60px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.pag-item{
+  cursor: pointer;
+  background-color: #1473E6;
+  height: 20px;
+  padding:12px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 4px;
+  margin: 4px;
+
+
+}
+
+
+.agendamento{
+  min-width: 900px;
+  background-color: white;
 }
 
 .simple-table th {
+  
   background-color: #ffffff;
 }
 
@@ -259,7 +320,7 @@
 .main {
   flex-grow: 1;
 
-  background-color: #eee;
+  background-color: #F2F4F7;
   
 }
 
@@ -315,7 +376,7 @@
 .container-dashboard{
   background-color: white;
   height: 77%;
-  width: 95%;
+  width: 100%;
   border-radius: 4px;
   display: grid;
   grid-template-areas: 
@@ -401,7 +462,7 @@
 .col-1{
 
   grid-area: col-1;
-  
+
 }
 .col-2{
 
@@ -415,12 +476,21 @@
 
 }
 
+.text{
+  color: #6F7377;
+  font-weight: 400;
+}
+
+.space{
+  margin: 32px 0;
+}
+
 .ReactModal__Content{
-  max-height: 150px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  color: #1A202C;
+}
+
+.bold{
+  font-weight: 500;
 }
 
 .message{
@@ -472,11 +542,13 @@
 
 .input-dashboard{
   margin: 8px 0;
-  border: 1px solid #BFBABA;
+  border: 1px solid #6F7377;
   border-radius: 4px;
-  padding: 6px ;
-  font-size: 14px;
+  padding: 0 4px;
+  height: 39px;
+  font-size: 16px;
   transition: .1s ease-in;
+  min-width: 320px;
 }
 
 .submit-dashboard{
@@ -495,12 +567,127 @@
    background-color: #446ebd;
 }
 
+/*profile*/
+
+.profile-button{
+  height: 39px; 
+  margin: 8px 0;
+  width: 120px;
+  margin-left: 8px;
+  border-color: #1473E6;
+  color: #1473E6;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-profile{
+  height: 39px;
+  margin: 8px 0;
+  width: 192px;
+  background-color: #1473E6;
+  border: transparent;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.send-profile:hover{
+  background-color: #4996f3;
+}
+
+.text-logo{
+  position: absolute;
+  top: 8px;
+  font-weight: bold;
+  font-size: 22px;
+  left: 8px;
+}
+
+.toschedule{
+  background-color: #1473E6;
+  color: white;
+  border: transparent;
+  border-radius: 4px;
+  height: 39px;
+  width: 110px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.title-data-profile {
+  color: #1A202C;
+  margin: 0 0 16px 0;
+}
+
+.line{
+  margin: 20px 0;
+  border: 1px solid  rgb(243, 243, 243);
+}
+
+.fa-pen-to-square{
+  float: right;
+  font-size: 22px;
+  color: #1A202C;
+  cursor: pointer;
+}
+
+.container-g{
+    height: 70%;
+    width: 80%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.container-dashboard-profile{
+  background-color: white;
+  height: 80%;
+  width: 100%;
+  border-radius: 4px;
+  display: grid;
+  grid-template-areas: 
+  "col-1 col-3";
+  column-gap: 10px;
+}
+
+/*fim profile*/
+
+/* modal profile */
+
+.container-button-profile{
+  margin: 8px 0;
+}
+
+
+.container-form-modal{
+  display: grid;
+  gap: 8px;
+  grid-template-areas: 
+  "cp-1 cp-2";
+}
+
+.cp-1, .cp-2{
+  display: flex;
+  
+  flex-direction: column;
+
+}
+
+.cp-1{
+  grid-area: cp-1;
+}
+.cp-1{
+  grid-area: cp-2;
+}
+
+
+/* fim modal profile*/
+
 
 /*end card user profile*/
 
 /* consulta */
-
-
 
 .consulta{
    border: 1px solid #ddd;
@@ -514,11 +701,9 @@
     height: 340px;
     width: 400px; 
     background-color: white;
-   
 }
 
 .form-consulta input{
-
   padding: 14px 0;
 }
 
@@ -556,7 +741,6 @@
   align-items: center;
   justify-content: center;
   transition: .5s ease-in;
-  
 }
 
 .content{
@@ -576,15 +760,9 @@
   grid-template-areas: 
   "col-1"
   "col-3";
-
   padding: 25px;
-
   column-gap: 10px;
- 
-
 }
-
-
 
 .container-dashboard-appontment{
   background-color: white;
@@ -597,16 +775,8 @@
   "col-1";
   padding: 25px;
   column-gap: 10px;
-
-
-
 }
-
-
-
- 
 }
-
 
 @media(max-width: 1440px) and (min-width: 876px){
 
@@ -620,12 +790,7 @@
   "col-1 col-3";
   padding: 25px;
   column-gap: 10px;
-
-
-
 }
-
- 
 }
 
 
