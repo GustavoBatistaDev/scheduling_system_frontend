@@ -141,7 +141,7 @@
 }
 
 .open{
-  margin-left: -231px;
+  margin-left: -261px;
 }
 
 .closed{
@@ -158,6 +158,30 @@
   object-fit: cover;
   height: 70px;
   margin-bottom: 10px;
+}
+
+.edit-input{
+  background-color: transparent;
+  border: transparent;
+  width: 15px;
+  height: 10px;
+}
+
+.edit{
+  cursor: pointer;
+  background-color: #2B2B2B;
+  border: transparent;
+  color: white;
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 10px;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -24px;
+}
+
+.hidden{
+  display: none;
 }
 
 .user-name {
@@ -229,7 +253,7 @@
 }
 
 .search{
-  height: 39px;
+  height: 35px;
   min-width: 290px;
   padding: 0 0 0 8px;
   float: right;
@@ -241,11 +265,17 @@ th{
 color: #1A202C;
 }
 
+.reagendar{
+
+color: #1A202C;
+}
+
 .input-search{
   height: 100%;
   width: 280px;
   background-color: transparent;
   border: transparent;
+
 }
 
 .btn-icon{
@@ -256,19 +286,15 @@ color: #1A202C;
   border: #1473E6;
 }
 
-.pagination{
-  min-height: 60px;
-  display: flex;
-  justify-content: end;
-  align-items: end;
-}
+
+
 
 .pag-item{
   cursor: pointer;
-  background-color: #1473E6;
-  height: 20px;
-  padding:12px;
-  width: 20px;
+  background-color: #1358ad;
+  height: 10px;
+  padding:10px;
+  width: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,6 +346,7 @@ color: #1A202C;
 .main {
   flex-grow: 1;
 
+  
   background-color: #F2F4F7;
   
 }
@@ -330,7 +357,7 @@ color: #1A202C;
 }
 
 .pending{
-  background-color: rgb(255, 255, 0);
+  background-color: rgb(253, 253, 28);
   color: black;
 }
 
@@ -342,9 +369,96 @@ color: #1A202C;
 .badge{
   border: transparent;
   border-radius: 3px;
- 
   min-width: 90px !important;
   padding: 2px;
+}
+
+.logo-chat-header{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  
+}
+
+.chat{
+  padding: 8px 0;
+  min-height: 340px;
+  color: white;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+ 
+}
+
+.container-header{
+  border-radius: 8px 8px 0 0;
+  background-color: #1473E6;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  max-width: 400px;
+}
+
+.online{
+  position: relative;
+  top: 10px;
+  left: -61px;
+}
+
+.hour{
+  color: #747474;
+  font-size: 10px;
+}
+
+.message-secretary{
+  float: left;
+  background-color: #D9D9D9;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 0 16px 16px 16px;
+  width: 51%;
+  margin: 8px 0;
+ 
+}
+
+.input-chat-container{
+  background-color: white;
+  width: 400px;
+  padding: 8px 16px;
+}
+
+.message-user{
+  display: block;
+  background-color: #1473E6;
+  color: white;
+  padding: 8px;
+  width: 51%;
+  float: right !important;
+  margin: 8px 0;
+  border-radius: 16px 16px 0px 16px;
+}
+
+.message-user p{
+  color: white;
+}
+
+
+.chat-header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}
+
+.body-messages{
+  padding: 0 16px;
+  padding-top: 44px;
+
 
 }
 
@@ -383,15 +497,40 @@ color: #1A202C;
   "col-1 col-3";
   padding: 25px;
   column-gap: 10px;
+}
 
 
+.input-chat{
+  width: 90%;
+
+  border-radius: 4px;
+  background-color: #D9D9D9;
+  padding: 8px ;
+  
+}
+
+.input-transparent{
+  border: transparent;
+  background-color: transparent;
+  width: 94%;
+}
+
+.container-input-chat{
+
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  background-color: white;
+  padding: 20px 0;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #D9D9D9;
 
 }
 
 .container-dashboard-appontment{
   background-color: white;
   height: 70%;
-  width: 95%;
+  width: 90%;
   border-radius: 4px;
   display: grid;
   grid-template-areas: 
@@ -401,7 +540,11 @@ color: #1A202C;
 }
 
 
-
+.espaco{
+  width: 400px;
+  height: 16px;
+  background-color: white;
+}
 
 .user{
 
@@ -609,7 +752,7 @@ color: #1A202C;
   color: white;
   border: transparent;
   border-radius: 4px;
-  height: 39px;
+  height: 35px;
   width: 110px;
   font-size: 16px;
   cursor: pointer;
@@ -634,7 +777,7 @@ color: #1A202C;
 
 .container-g{
     height: 70%;
-    width: 80%;
+    width: 60%;
     background-color: white;
     padding: 25px;
     border-radius: 4px;
@@ -665,6 +808,7 @@ color: #1A202C;
   gap: 8px;
   grid-template-areas: 
   "cp-1 cp-2";
+
 }
 
 .cp-1, .cp-2{

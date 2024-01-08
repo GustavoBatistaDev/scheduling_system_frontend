@@ -1,58 +1,67 @@
-/* eslint-disable react/prop-types */
 export const Schedule = () => {
     return (
-      <table  className="simple-table">
-      <thead >
-        <tr >
+    
+        <div className="container-dashboard"  style={{alignItems: 'center', maxHeight: '400px', position: 'relative'}}>
+          <h1 style={{position: 'absolute', top: '10px', left:'10px', padding: '8px', color: '#1A202C'}}>Histórico</h1>
+        <div className="to-schedule">
+        <table  className="simple-table">
+        <thead >
+        <tr>
             <th>ID</th>
-            <th>Nome</th>
-            <th>Último nome</th>
-            <th>Email</th>
-            <th>CPF</th>
-            <th>Celular</th>
-            
+            <th>Especialidade</th>
+            <th>Doutor</th>
+            <th>Data</th>
+            <th>Data Solicitação</th>
+            <th>Status</th>
         </tr>
       </thead>
       <tbody >
         <tr>
           <td>1</td>
-          <td><a href="">Gustavo</a></td>
-          <td><a href="">Batista</a></td>
-          <td>gustavobatista@gmail.com</td>
-          <td>101.764.876-22</td>
-          <td>(73) 98167-9842</td>
-    
+          <td>Ortopedista</td>
+          <td>Camilo Freitas Costa</td>
+          <td>29/10/2023</td>
+          <td>27/10/2023</td>
+          <td><button  className="badge cancel">Cancelado</button></td>
+        
         </tr>
          <tr>
           <td>1</td>
-           <td><a href="">Gustavo</a></td>
-          <td><a href="">Batista</a></td>
-          <td>gustavobatista@gmail.com</td>
-          <td>101.764.876-22</td>
-          <td>(73) 98167-9842</td>
-    
+          <td>Ortopedista</td>
+          <td>Camilo Freitas Costa</td>
+          <td>29/10/2023</td>
+          <td>27/10/2023</td>
+          <td><button  className="badge concluded">Concluído</button></td>
+        
+          
         </tr>
          <tr>
           <td>1</td>
-          <td><a href="">Gustavo</a></td>
-          <td><a href="">Batista</a></td>
-          <td>gustavobatista@gmail.com</td>
-          <td>101.764.876-22</td>
-          <td>(73) 98167-9842</td>
-    
+          <td>Ortopedista</td>
+          <td>Camilo Freitas Costa</td>
+          <td>29/10/2023</td>
+          <td>27/10/2023</td>
+          <td><button  className="badge cancel">Cancelado</button></td>
+       
+          
         </tr>
          <tr>
           <td>1</td>
-         <td><a href="">Gustavo</a></td>
-          <td><a href="">Batista</a></td>
-          <td>gustavobatista@gmail.com</td>
-          <td>101.764.876-22</td>
-          <td>(73) 98167-9842</td>
-    
+          <td>Ortopedista</td>
+          <td>Camilo Freitas Costa</td>
+          <td>29/10/2023</td>
+          <td>27/10/2023</td>
+          <td ><button className="badge concluded">Concluído</button></td>
+     
         </tr>
         
 
       </tbody>
     </table>
+   
+</div>
+</div>
+  
     );
 };
+

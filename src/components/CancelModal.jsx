@@ -3,7 +3,7 @@
 
 import Modal from 'react-modal';
 
-const LogoutModal = ({ isOpen, onRequestClose, onConfirm, maxWidth = 200 }) => {
+const CancelModal = ({ isOpen, onRequestClose, onConfirm, maxWidth = 300 }) => {
   return (
     <Modal
       id='logout'
@@ -16,18 +16,18 @@ const LogoutModal = ({ isOpen, onRequestClose, onConfirm, maxWidth = 200 }) => {
         },
         content: {
           maxWidth: maxWidth,
-          maxHeight: 120,
+          maxHeight:150,
           margin: 'auto',
         },
       }}
     >
-      <h3 style={{textAlign:'center', marginBottom:'20px'}} className='text-color'>Tem certeza que deseja sair?</h3>
+      <h3 style={{textAlign:'center', marginBottom:'20px'}} className='text-color'>Tem certeza que deseja cancelar?</h3>
       <div style={{display:'flex', justifyContent:'center'}}>
-        <button className='yes' onClick={onConfirm}>Sim</button>
+        <button className='badge cancel' onClick={onConfirm}>Sim</button>
         <button className='no' onClick={onRequestClose}>Cancelar</button>
       </div>
     </Modal>
   );
 };
 
-export default LogoutModal;
+export default CancelModal;
